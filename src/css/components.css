@@ -1,0 +1,68 @@
+/* 테마 색상 */
+.theme1 {
+    @apply bg-gray-900;
+}
+.theme2 {
+    @apply bg-gray-800;
+}
+
+
+/* header */
+header {
+    @apply pt-5 pb-5;
+}
+.blind {
+    @apply absolute top-0 left-full w-0 overflow-hidden;
+    
+}
+.logo {
+    @apply text-center text-white text-2xl;
+}
+nav {
+    @apply text-center mt-2;
+}
+nav dd {
+    @apply inline text-white;
+}
+nav dd + dd::before, footer dd + dd::before {
+    content:"| ";
+}
+nav a:hover, footer a:hover {
+    @apply underline;
+}
+
+/* content */
+body {
+    @apply relative;
+}
+.container {
+    @apply max-w-full relative;
+}
+main {
+    @apply relative min-h-96 pt-5 pb-5;
+}
+
+/* footer */
+footer {
+    @apply text-center text-white pt-5 pb-5;
+}
+footer dd {
+    @apply inline text-gray-300;
+}
+.copy {
+    @apply mt-5 text-sm;
+}
+
+/* 배경이미지 */
+.bgImgWeb {
+    @apply shadow-lg w-64 pt-3 pl-3 pr-3 pb-3 bg-white relative left-2/4 -ml-32 mt-5 md:mt-0 md:fixed md:z-0 md:top-96 md:left-3/4 md:ml-8 xl:-ml-32;
+}
+
+.bgImgWeb::before {
+    content:"";
+    @apply block h-24 bg-blue-400;
+}
+.bgImgWeb::after {
+    content:"";
+    @apply block h-60 bg-gray-300 mt-3;
+}

@@ -1,3 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+/* 레이아웃 */
+@import "./css/components.css";
+/* 버튼 디자인 */
+@import "./css/button.css";
+/* 로그인 페이지 */
+@import "./css/login.css";
+
+@import "tailwindcss/utilities";
