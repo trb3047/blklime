@@ -1,5 +1,5 @@
 .sampleList {
-    @apply overflow-hidden -ml-5 pl-5 pr-5 max-w-screen-2xl 2xl:ml-auto 2xl:mr-auto 2xl:pl-0 2xl:pr-0;
+    @apply overflow-hidden -ml-5 pt-5 pl-5 pr-5 max-w-screen-2xl 2xl:ml-auto 2xl:mr-auto 2xl:pl-0 2xl:pr-0;
 }
 .sampleList > li {
     @apply float-left w-full sm:w-6/12 lg:w-3/12 mb-5;
@@ -33,7 +33,7 @@
 }
 .sampleList a.box:hover {
     transition:100ms;
-    @apply top-1 left-1;
+    @apply -top-1 -left-1;
 }
 .sampleList a.box:hover .tit {
     @apply underline;

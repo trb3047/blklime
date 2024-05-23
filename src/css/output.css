@@ -865,6 +865,7 @@ footer dd {
   margin-left: -1.25rem;
   max-width: 1536px;
   overflow: hidden;
+  padding-top: 1.25rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
@@ -988,8 +989,8 @@ footer dd {
 
 .sampleList a.box:hover {
   transition:100ms;
-  top: 0.25rem;
-  left: 0.25rem;
+  top: -0.25rem;
+  left: -0.25rem;
 }
 
 .sampleList a.box:hover .tit {
