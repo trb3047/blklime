@@ -58,7 +58,7 @@ footer dd {
 
 /* 배경이미지 */
 .bgImgWeb {
-    @apply shadow-lg w-64 pt-3 pl-3 pr-3 pb-3 bg-white relative left-2/4 -ml-32 mt-5 md:mt-0 md:fixed md:z-0 md:top-96 md:left-3/4 md:ml-8 xl:-ml-32;
+    @apply shadow-lg w-64 p-3 bg-white relative left-2/4 -ml-32 mt-5 md:mt-0 md:fixed md:z-0 md:top-96 md:left-3/4 md:ml-8 xl:-ml-32;
 }
 
 .bgImgWeb::before {

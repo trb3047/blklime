@@ -18,7 +18,7 @@
     @apply w-full h-full;
 }
 .sampleList .contBox {
-    @apply text-black text-left pt-3 pl-3 pr-3 pb-3;
+    @apply text-black text-left p-3;
 }
 .sampleList .tit {
     @apply text-xl font-bold;

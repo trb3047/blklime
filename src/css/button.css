@@ -1,6 +1,6 @@
 /* 버튼 */
 .btn {
-    @apply rounded-md pt-2 pl-2 pr-2 pb-2 bg-gray-500 text-white;
+    @apply rounded-md p-2 bg-gray-500 text-white;
 }
 .btn.apply {
     @apply bg-blue-700;

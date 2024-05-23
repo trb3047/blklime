@@ -8,11 +8,11 @@
     @apply mt-2;
 }
 .inputBox label {
-    @apply w-2/6 float-left block pt-2 pb-2 pl-2 pr-2;
+    @apply w-2/6 float-left block p-2;
 }
 .inputBox input {
     @apply w-4/6 float-left; 
 }
 .input {
-    @apply block rounded-md pt-2 pb-2 pl-2 pr-2 border;
+    @apply block rounded-md p-2 border;
 }
