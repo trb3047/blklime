@@ -1,5 +1,5 @@
 .editArea {
-    @apply absolute top-0 left-0 bottom-0 w-60 z-10 shadow-lg;
+    @apply absolute top-0 left-0 bottom-0 w-60 z-10 shadow-lg border-r;
 }
 .editArea > h2 {
     @apply mt-5 mb-2 font-bold;
