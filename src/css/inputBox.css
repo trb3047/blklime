@@ -14,5 +14,5 @@
     @apply w-4/6 float-left; 
 }
 .input {
-    @apply block rounded-md pt-2 pb-2 pl-2 pr-2 border; 
+    @apply block rounded-md pt-2 pb-2 pl-2 pr-2 border;
 }

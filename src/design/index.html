@@ -196,7 +196,7 @@
             function listOp() {
                 var list = document.querySelectorAll(".sampleList .box");
                 for (var i=1; i<list.length+1; i++) {
-                    obj = list[i-1];
+                    var obj = list[i-1];
                     on(obj, i*150);
                 }
             }
