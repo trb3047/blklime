@@ -755,6 +755,8 @@ footer dd {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .btn.apply {
@@ -810,9 +812,13 @@ footer dd {
 
 .inputBox input {
   float: left;
-  display: block;
   width: 66.666667%;
+}
+
+.input {
+  display: block;
   border-radius: 0.375rem;
+  border-width: 1px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
@@ -906,6 +912,10 @@ footer dd {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.sampleList a {
+  display: block;
+}
+
 .sampleList .img {
   height: 16rem;
   width: 100%;
@@ -976,6 +986,195 @@ footer dd {
   opacity: 1;
 }
 
+.sampleList a.box:hover {
+  transition:100ms;
+  top: 0.25rem;
+  left: 0.25rem;
+}
+
+.sampleList a.box:hover .tit {
+  text-decoration-line: underline;
+}
+
+/* 웹 에디터 페이지 */
+
+.editArea {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 10;
+  width: 15rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.editArea > h2 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.editArea .option {
+  padding-top: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  text-align: left;
+}
+
+.editArea .option .tit {
+  border-bottom-width: 1px;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.editArea .option ul {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.editArea .option ul > li::before {
+  content:"- ";
+}
+
+.editArea .option ul > li + li {
+  margin-top: 0.5rem;
+}
+
+.editArea .addGroup {
+  text-align: right;
+}
+
+.editArea .addGroup input {
+  width: 100%;
+}
+
+.editArea .addGroup input + .btn {
+  margin-top: 0.5rem;
+}
+
+.viewArea {
+  position: relative;
+  margin-left: 15rem;
+  min-height: 24rem;
+  min-height: 100vh;
+}
+
+.viewArea .header {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.viewArea .tit {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.viewArea .nav {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.viewArea .nav dd {
+  display: inline;
+}
+
+.viewArea .nav dd + dd::before, .viewArea .foot dd + dd::before {
+  content:"| ";
+}
+
+.viewArea .nav a:hover, .viewArea .foot a:hover, .viewArea .nav a.on {
+  text-decoration-line: underline;
+}
+
+.viewArea .cont {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 24rem;
+  max-width: 1024px;
+  overflow: hidden;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  text-align: center;
+}
+
+.viewArea .cont .img1 {
+  margin-bottom: 1.25rem;
+  height: 20rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.viewArea .banner {
+  float: left;
+  min-height: 20rem;
+  width: 50%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
+}
+
+.viewArea .notice {
+  float: left;
+  width: 50%;
+}
+
+.viewArea .notice .tit {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 700;
+}
+
+.viewArea .notice > ul {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  text-align: left;
+}
+
+.viewArea .notice > ul > li {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+}
+
+.viewArea .notice > ul > li + li {
+  margin-top: 0.5rem;
+}
+
+.viewArea .notice a:hover {
+  text-decoration-line: underline;
+}
+
+.viewArea .foot {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  text-align: center;
+}
+
+.viewArea .foot dd {
+  display: inline;
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.viewArea .copy {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .float-right {
   float: right;
 }
@@ -988,24 +1187,12 @@ footer dd {
   margin-top: 0.5rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-3\/12 {
-  width: 25%;
-}
-
-.w-9\/12 {
-  width: 75%;
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .w-10\/12 {
@@ -1016,12 +1203,8 @@ footer dd {
   width: 16.666667%;
 }
 
-.max-w-screen-xl {
-  max-width: 1280px;
-}
-
-.max-w-screen-lg {
-  max-width: 1024px;
+.w-full {
+  width: 100%;
 }
 
 .max-w-screen-md {
@@ -1032,8 +1215,17 @@ footer dd {
   overflow: hidden;
 }
 
+.border-b {
+  border-bottom-width: 1px;
+}
+
 .border-t {
   border-top-width: 1px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .border-t-white {
@@ -1041,8 +1233,9 @@ footer dd {
   border-top-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.pt-2 {
-  padding-top: 0.5rem;
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .pl-5 {
@@ -1051,6 +1244,10 @@ footer dd {
 
 .pr-5 {
   padding-right: 1.25rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .text-left {
@@ -1069,6 +1266,11 @@ footer dd {
 
 .font-bold {
   font-weight: 700;
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .underline {

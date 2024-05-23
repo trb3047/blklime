@@ -11,5 +11,7 @@
 @import "./css/login.css";
 /* 디자인 샘플 페이지 */
 @import "./css/sample.css";
+/* 웹 에디터 페이지 */
+@import "./css/webEdit.css";
 
 @import "tailwindcss/utilities";

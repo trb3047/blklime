@@ -1,0 +1,92 @@
+.editArea {
+    @apply absolute top-0 left-0 bottom-0 w-60 z-10 shadow-lg;
+}
+.editArea > h2 {
+    @apply mt-5 mb-2 font-bold;
+}
+.editArea .option {
+    @apply text-left pt-2 pl-3 pr-3;
+}
+.editArea .option .tit {
+    @apply font-bold border-b pb-2;
+}
+.editArea .option ul {
+    @apply pl-2 pr-2 pt-2 pb-2;
+}
+.editArea .option ul > li::before {
+    content:"- ";
+}
+.editArea .option ul > li + li {
+    @apply mt-2;
+}
+.editArea .addGroup {
+    @apply text-right;    
+}
+.editArea .addGroup input {
+    @apply w-full;
+}
+.editArea .addGroup input + .btn {
+    @apply mt-2
+}
+
+.viewArea {
+    @apply relative min-h-96 ml-60 min-h-screen;
+}
+
+.viewArea .header {
+    @apply pt-5 pb-5;
+}
+.viewArea .tit {
+    @apply text-center text-2xl font-bold;
+}
+.viewArea .nav {
+    @apply text-center mt-2;
+}
+.viewArea .nav dd {
+    @apply inline;
+}
+.viewArea .nav dd + dd::before, .viewArea .foot dd + dd::before {
+    content:"| ";
+}
+.viewArea .nav a:hover, .viewArea .foot a:hover, .viewArea .nav a.on {
+    @apply underline;
+}
+
+.viewArea .cont {
+    @apply relative text-center min-h-96 pt-5 pb-5 overflow-hidden max-w-screen-lg ml-auto mr-auto;
+}
+.viewArea .cont .img1 {
+    @apply h-80 bg-gray-300 text-3xl text-center mb-5;
+}
+.viewArea .banner {
+    @apply float-left w-2/4 min-h-80 bg-blue-300;
+}
+.viewArea .notice {
+    @apply float-left w-2/4;
+}
+.viewArea .notice .tit {
+    @apply text-left ml-5 mr-5 mb-2 font-bold;
+}
+.viewArea .notice > ul {
+    @apply ml-5 mr-5 text-left;
+}
+.viewArea .notice > ul > li {
+    @apply text-ellipsis line-clamp-1;
+}
+.viewArea .notice > ul > li + li {
+    @apply mt-2;
+}
+.viewArea .notice a:hover {
+    @apply underline;
+}
+
+
+.viewArea .foot {
+    @apply text-center pt-5 pb-5;
+}
+.viewArea .foot dd {
+    @apply inline text-gray-300;
+}
+.viewArea .copy {
+    @apply mt-5 text-sm;
+}
