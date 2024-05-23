@@ -5,7 +5,11 @@
 @import "./css/components.css";
 /* 버튼 디자인 */
 @import "./css/button.css";
+/* 입력 폼 디자인 */
+@import "./css/inputBox.css";
 /* 로그인 페이지 */
 @import "./css/login.css";
+/* 디자인 샘플 페이지 */
+@import "./css/sample.css";
 
 @import "tailwindcss/utilities";

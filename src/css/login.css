@@ -1,28 +1,6 @@
 .loginBox {
-    @apply max-w-xl text-center text-white pt-5 pb-5 pl-5 pr-5 ml-auto mr-auto;
+    @apply max-w-xl text-center pt-5 pb-5 pl-5 pr-5 ml-auto mr-auto;
 }
-.loginBox h2 {
-    @apply text-xl;
-}
-.loginBox .inputBox {
-    @apply mt-5;
-}
-.inputBox {
-    @apply text-left;
-}
-.inputBox li {
-    @apply overflow-hidden;
-}
-.inputBox li + li {
-    @apply mt-2;
-}
-.inputBox label {
-    @apply w-2/6 float-left block pt-2 pb-2 pl-2 pr-2;
-}
-.inputBox input {
-    @apply w-4/6 float-left block rounded-md pt-2 pb-2 pl-2 pr-2; 
-}
-
 .loginBox .idPass {
     @apply text-sm text-gray-300 mt-5;
 }
@@ -32,7 +10,6 @@
 .loginBox .idPass a:hover {
     @apply underline
 }
-
 .loginBox .btnGroup {
     @apply mt-5 overflow-visible;
 }

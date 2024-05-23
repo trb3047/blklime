@@ -1,9 +1,9 @@
 /* 테마 색상 */
 .theme1 {
-    @apply bg-gray-900;
+    @apply bg-gray-900 text-white;
 }
 .theme2 {
-    @apply bg-gray-800;
+    @apply bg-gray-800 text-white;
 }
 
 
@@ -16,13 +16,13 @@ header {
     
 }
 .logo {
-    @apply text-center text-white text-2xl;
+    @apply text-center text-2xl;
 }
 nav {
     @apply text-center mt-2;
 }
 nav dd {
-    @apply inline text-white;
+    @apply inline;
 }
 nav dd + dd::before, footer dd + dd::before {
     content:"| ";
@@ -33,7 +33,7 @@ nav a:hover, footer a:hover {
 
 /* content */
 body {
-    @apply relative;
+    @apply relative text-center;
 }
 .container {
     @apply max-w-full relative;
@@ -44,7 +44,7 @@ main {
 
 /* footer */
 footer {
-    @apply text-center text-white pt-5 pb-5;
+    @apply text-center pt-5 pb-5;
 }
 footer dd {
     @apply inline text-gray-300;
