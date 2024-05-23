@@ -27,7 +27,7 @@ nav dd {
 nav dd + dd::before, footer dd + dd::before {
     content:"| ";
 }
-nav a:hover, footer a:hover {
+nav a:hover, footer a:hover, nav a.on {
     @apply underline;
 }
 
@@ -35,11 +35,14 @@ nav a:hover, footer a:hover {
 body {
     @apply relative text-center;
 }
-.container {
-    @apply max-w-full relative;
-}
 main {
     @apply relative min-h-96 pt-5 pb-5;
+}
+main > * {
+    @apply md:relative md:z-10
+}
+.container {
+    @apply max-w-full relative;
 }
 
 /* footer */
