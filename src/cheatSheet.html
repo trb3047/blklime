@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheat Sheet</title>
-    <link href="../css/output.css" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
 </head>
 <body class="theme2">
@@ -38,23 +38,23 @@
                             <p class="mt-2 mb-2">Reppo.에서 복사해오기</p>
                             <pre><code class="language-plaintext">&> git clone [git url]</code></pre> 
                         </div>
-                        <div class="md:ml-5 mt-5 pt-2 border-t border-t-white">
+                        <div class="md:ml-5 mt-5 pt-2 border-t border-t-white pb-5 border-b border-b-white md:border-b-0 md:pb-2">
                             <h4 class="font-bold">임시 저장소(STAGE)와 형상(SNAPSHOT) 관리</h4>
                             <p class="mt-2 mb-2">현재 Git 상태 확인</p>
                             <pre><code class="language-plaintext">&> git status</code></pre> 
                             <p class="mt-2 mb-2">임시저장소(stage)에 로컬 파일 추가</p>
                             <pre><code class="language-plaintext">&> git add [파일명]</code></pre> 
-                            <p class="mb-2">add된 파일을 로컬에 유지하면서 unstage</p>
+                            <p class="mt-2 mb-2">add된 파일을 로컬에 유지하면서 unstage</p>
                             <pre><code class="language-plaintext">&> git reset [파일명]</code></pre> 
                             <p class="mt-2 mb-2">staged가 아닌 파일들에서 차이점 보여주기</p>
                             <pre><code class="language-plaintext">&> git diff</code></pre> 
                             <p class="mb-2">staged 상태에서 아직 commit 되지 않은 파일들의 차이점 보여주기</p>
-                            <pre><code class="language-plaintext">&> git diff --staged</code></pre> 
+                            <pre><code class="language-plaintext">&> git diff --staged</code></pre>
                             <p class="mt-2 mb-2">commit 하기</p>
                             <pre><code class="language-plaintext">&> git commit -m "[작업 내용에 대한 메세지]"</code></pre> 
                         </div>
                     </li>
-                    <li class="float-left w-full md:w-6/12">
+                    <li class="float-left w-full mt-5 md:w-6/12 md:mt-0">
                         <div class="md:ml-5">
                             <h4 class="font-bold">BRANCH와 MERGE</h4>
                             <p class="mb-2">브랜치 목록 보기</p>
