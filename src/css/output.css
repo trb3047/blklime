@@ -1164,6 +1164,10 @@ footer dd {
   float: left;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1176,6 +1180,10 @@ footer dd {
   margin-top: 1.25rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .w-10\/12 {
   width: 83.333333%;
 }
@@ -1186,6 +1194,10 @@ footer dd {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-screen-lg {
+  max-width: 1024px;
 }
 
 .max-w-screen-md {
@@ -1265,6 +1277,22 @@ footer dd {
 
   .md\:mr-auto {
     margin-right: auto;
+  }
+
+  .md\:ml-5 {
+    margin-left: 1.25rem;
+  }
+
+  .md\:-ml-5 {
+    margin-left: -1.25rem;
+  }
+
+  .md\:-ml-2 {
+    margin-left: -0.5rem;
+  }
+
+  .md\:w-6\/12 {
+    width: 50%;
   }
 
   .md\:pl-0 {
