@@ -29,58 +29,60 @@
                             <p class="mt-2 mb-2">해당 디렉토리에 .git 설치</p>
                             <pre><code class="language-plaintext">&> git init</code></pre>
                             <p class="mt-2 mb-2">Repo.에서 복사해오기</p>
-                            <pre><code class="language-plaintext">&> git clone [git url]</code></pre>
+                            <pre><code class="language-plaintext">$> git clone [git url]</code></pre>
                             <p class="mt-2 mb-2">설정한 디렉토리 이름으로 Repo.에서 복사해오기</p>
-                            <pre><code class="language-plaintext">&> git clone [git url] [디렉토리명]</code></pre> 
+                            <pre><code class="language-plaintext">$> git clone [git url] [디렉토리명]</code></pre> 
                         </div>
                         <div class="md:ml-5 mt-5 pt-2 border-t border-t-white pb-5 border-b border-b-white md:border-b-0 md:pb-2">
                             <h4 class="font-bold">설정</h4>
                             <p class="mt-2 mb-2">Git 설정 보기</p>
-                            <pre><code class="language-plaintext">&> git config --list</code></pre> 
+                            <pre><code class="language-plaintext">$> git config --list</code></pre> 
                             <p class="mt-2 mb-2">이름 보기 *이름과 이메일이 맞아야 연결이 가능하다</p>
-                            <pre><code class="language-plaintext">&> git config user.name</code></pre> 
+                            <pre><code class="language-plaintext">$> git config user.name</code></pre> 
                             <p class="mt-2 mb-2">이름 설정</p>
-                            <pre><code class="language-plaintext">&> git config user.name "이름"</code></pre> 
-                            <p class="mt-2 mb-2">전역 이름 설정 *내 WD의 Git 유저 이름이 전부 바뀌기 때문에 각각 다르게 사용하고 싶다면 주의할 것</p>
-                            <pre><code class="language-plaintext">&> git config user.name --global "이름"</code></pre> 
+                            <pre><code class="language-plaintext">$> git config user.name "이름"</code></pre> 
+                            <p class="mt-2 mb-2">전역 이름 설정<br>*내 WD의 Git 유저 이름이 전부 바뀌기 때문에 각각 다르게 사용하고 싶다면 주의할 것</p>
+                            <pre><code class="language-plaintext">$> git config user.name --global "이름"</code></pre> 
                             <p class="mt-2 mb-2">이메일 주소 보기</p>
-                            <pre><code class="language-plaintext">&> git config user.email</code></pre>
+                            <pre><code class="language-plaintext">$> git config user.email</code></pre>
                             <p class="mt-2 mb-2">이메일 주소 설정</p>
-                            <pre><code class="language-plaintext">&> git config user.email [이메일 주소]</code></pre>
-                            <p class="mt-2 mb-2">전역 이메일 주소 설정 *전역 이름 설정과 같이 주의할 것</p>
-                            <pre><code class="language-plaintext">&> git config user.email --global [이메일 주소]</code></pre>
+                            <pre><code class="language-plaintext">$> git config user.email [이메일 주소]</code></pre>
+                            <p class="mt-2 mb-2">전역 이메일 주소 설정<br>*전역 이름 설정과 같이 주의할 것</p>
+                            <pre><code class="language-plaintext">$> git config user.email --global [이메일 주소]</code></pre>
                             <p class="mt-2 mb-2">GitHub 인증정보 cache 활성화</p>
-                            <pre><code class="language-plaintext">&> git config --global credential.helper cache</code></pre> 
-                        </div>
-                        <div class="md:ml-5 mt-5 pt-2 border-t border-t-white pb-5 border-b border-b-white md:border-b-0 md:pb-2">
-                            <h4 class="font-bold">임시 저장소(STAGE)와 형상(SNAPSHOT) 관리</h4>
-                            <p class="mt-2 mb-2">현재 Git 상태 확인</p>
-                            <pre><code class="language-plaintext">&> git status</code></pre> 
-                            <p class="mt-2 mb-2">임시저장소(stage)에 로컬 파일 추가</p>
-                            <pre><code class="language-plaintext">&> git add [파일명]</code></pre> 
-                            <p class="mt-2 mb-2">add된 파일을 로컬에 유지하면서 unstage</p>
-                            <pre><code class="language-plaintext">&> git reset [파일명]</code></pre> 
-                            <p class="mt-2 mb-2">staged가 아닌 파일들에서 차이점 보여주기</p>
-                            <pre><code class="language-plaintext">&> git diff</code></pre> 
-                            <p class="mt-2 mb-2">staged 상태에서 아직 commit 되지 않은 파일들의 차이점 보여주기</p>
-                            <pre><code class="language-plaintext">&> git diff --staged</code></pre>
-                            <p class="mt-2 mb-2">commit 하기</p>
-                            <pre><code class="language-plaintext">&> git commit -m "[작업 내용에 대한 메세지]"</code></pre> 
+                            <pre><code class="language-plaintext">$> git config --global credential.helper cache</code></pre> 
+                            <p class="mt-2 mb-2">Git 설정 한 눈에 보기<br>*Git 활성화 된 디렉토리에서</p>
+                            <pre><code class="language-plaintext">$> cat .git/config</code></pre> 
                         </div>
                     </li>
-                    <li class="float-left w-full mt-5 md:w-6/12 md:mt-0">
-                        <div class="md:ml-5">
+                    <li class="float-left w-full mt-2 md:w-6/12 md:mt-0 md:pb-2">
+                        <div class="md:ml-5 pb-5 pb-5 border-b border-b-white">
+                            <h4 class="font-bold">임시 저장소(STAGE)와 형상(SNAPSHOT) 관리</h4>
+                            <p class="mt-2 mb-2">현재 Git 상태 확인</p>
+                            <pre><code class="language-plaintext">$> git status</code></pre> 
+                            <p class="mt-2 mb-2">임시저장소(stage)에 로컬 파일 추가</p>
+                            <pre><code class="language-plaintext">$> git add [파일명]</code></pre> 
+                            <p class="mt-2 mb-2">add된 파일을 로컬에 유지하면서 unstage</p>
+                            <pre><code class="language-plaintext">$> git reset [파일명]</code></pre> 
+                            <p class="mt-2 mb-2">staged가 아닌 파일들에서 차이점 보여주기</p>
+                            <pre><code class="language-plaintext">$> git diff</code></pre> 
+                            <p class="mt-2 mb-2">staged 상태에서 아직 commit 되지 않은 파일들의 차이점 보여주기</p>
+                            <pre><code class="language-plaintext">$> git diff --staged</code></pre>
+                            <p class="mt-2 mb-2">commit 하기</p>
+                            <pre><code class="language-plaintext">$> git commit -m "[작업 내용에 대한 메세지]"</code></pre> 
+                        </div>
+                        <div class="md:ml-5 mt-2 pt2">
                             <h4 class="font-bold">BRANCH와 MERGE</h4>
                             <p class="mt-2 mb-2">브랜치 목록 보기</p>
-                            <pre><code class="language-plaintext">&> git branch</code></pre> 
+                            <pre><code class="language-plaintext">$> git branch</code></pre> 
                             <p class="mt-2 mb-2">새 브랜치 만들기</p>
-                            <pre><code class="language-plaintext">&> git branch [브랜치 이름]</code></pre> 
+                            <pre><code class="language-plaintext">$> git branch [브랜치 이름]</code></pre> 
                             <p class="mt-2 mb-2">다른 브랜치로 이동</p>
-                            <pre><code class="language-plaintext">&> git checkout [브랜치 이름]</code></pre> 
+                            <pre><code class="language-plaintext">$> git checkout [브랜치 이름]</code></pre> 
                             <p class="mt-2 mb-2">다른 브랜치에서 가져와 합치기</p>
-                            <pre><code class="language-plaintext">&> git merge [브랜치 이름]</code></pre> 
+                            <pre><code class="language-plaintext">$> git merge [브랜치 이름]</code></pre> 
                             <p class="mt-2 mb-2">현재 브랜치의 기록을 보기</p>
-                            <pre><code class="language-plaintext">&> git log</code></pre> 
+                            <pre><code class="language-plaintext">$> git log</code></pre> 
                         </div>
                     </li>
                 </ul>
