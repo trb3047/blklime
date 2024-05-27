@@ -25,18 +25,32 @@
                 <ul class="overflow-hidden text-left w-full md:-ml-2">
                     <li class="float-left w-full md:w-6/12">
                         <div class="md:ml-5">
-                            <h4 class="font-bold">설정</h4>
-                            <p class="mb-2 mt-2">유저 정보 설정하기</p>
-                            <pre><code class="language-plaintext">$> git config --global user.name "이름"</code></pre> 
-                            <pre><code class="language-plaintext">$> git config --global user.email "이메일 주소"</code></pre> 
-                            <pre><code class="language-plaintext">$> git config --global color.ui auto</code></pre> 
-                        </div>
-                        <div class="md:ml-5 mt-5 pt-2 border-t border-t-white">
                             <h4 class="font-bold">설치</h4>
                             <p class="mt-2 mb-2">해당 디렉토리에 .git 설치</p>
-                            <pre><code class="language-plaintext">&> git init</code></pre> 
-                            <p class="mt-2 mb-2">Reppo.에서 복사해오기</p>
-                            <pre><code class="language-plaintext">&> git clone [git url]</code></pre> 
+                            <pre><code class="language-plaintext">&> git init</code></pre>
+                            <p class="mt-2 mb-2">Repo.에서 복사해오기</p>
+                            <pre><code class="language-plaintext">&> git clone [git url]</code></pre>
+                            <p class="mt-2 mb-2">설정한 디렉토리 이름으로 Repo.에서 복사해오기</p>
+                            <pre><code class="language-plaintext">&> git clone [git url] [디렉토리명]</code></pre> 
+                        </div>
+                        <div class="md:ml-5 mt-5 pt-2 border-t border-t-white pb-5 border-b border-b-white md:border-b-0 md:pb-2">
+                            <h4 class="font-bold">설정</h4>
+                            <p class="mt-2 mb-2">Git 설정 보기</p>
+                            <pre><code class="language-plaintext">&> git config --list</code></pre> 
+                            <p class="mt-2 mb-2">이름 보기 *이름과 이메일이 맞아야 연결이 가능하다</p>
+                            <pre><code class="language-plaintext">&> git config user.name</code></pre> 
+                            <p class="mt-2 mb-2">이름 설정</p>
+                            <pre><code class="language-plaintext">&> git config user.name "이름"</code></pre> 
+                            <p class="mt-2 mb-2">전역 이름 설정 *내 WD의 Git 유저 이름이 전부 바뀌기 때문에 각각 다르게 사용하고 싶다면 주의할 것</p>
+                            <pre><code class="language-plaintext">&> git config user.name --global "이름"</code></pre> 
+                            <p class="mt-2 mb-2">이메일 주소 보기</p>
+                            <pre><code class="language-plaintext">&> git config user.email</code></pre>
+                            <p class="mt-2 mb-2">이메일 주소 설정</p>
+                            <pre><code class="language-plaintext">&> git config user.email [이메일 주소]</code></pre>
+                            <p class="mt-2 mb-2">전역 이메일 주소 설정 *전역 이름 설정과 같이 주의할 것</p>
+                            <pre><code class="language-plaintext">&> git config user.email --global [이메일 주소]</code></pre>
+                            <p class="mt-2 mb-2">GitHub 인증정보 cache 활성화</p>
+                            <pre><code class="language-plaintext">&> git config --global credential.helper cache</code></pre> 
                         </div>
                         <div class="md:ml-5 mt-5 pt-2 border-t border-t-white pb-5 border-b border-b-white md:border-b-0 md:pb-2">
                             <h4 class="font-bold">임시 저장소(STAGE)와 형상(SNAPSHOT) 관리</h4>
