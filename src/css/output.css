@@ -1156,6 +1156,18 @@ footer dd {
   line-height: 1.25rem;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
+.right-3 {
+  right: 0.75rem;
+}
+
 .float-right {
   float: right;
 }
@@ -1208,26 +1220,6 @@ footer dd {
   overflow: hidden;
 }
 
-.text-ellipsis {
-  text-overflow: ellipsis;
-}
-
-.text-wrap {
-  text-wrap: wrap;
-}
-
-.text-nowrap {
-  text-wrap: nowrap;
-}
-
-.break-words {
-  overflow-wrap: break-word;
-}
-
-.break-keep {
-  word-break: keep-all;
-}
-
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1274,10 +1266,6 @@ footer dd {
 
 .text-left {
   text-align: left;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .text-3xl {
