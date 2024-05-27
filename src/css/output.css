@@ -1208,6 +1208,26 @@ footer dd {
   overflow: hidden;
 }
 
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.text-wrap {
+  text-wrap: wrap;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
+}
+
+.break-words {
+  overflow-wrap: break-word;
+}
+
+.break-keep {
+  word-break: keep-all;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1256,6 +1276,10 @@ footer dd {
   text-align: left;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1279,6 +1303,10 @@ footer dd {
   text-decoration-line: underline;
 }
 
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
 @media (min-width: 768px) {
   .md\:-ml-2 {
     margin-left: -0.5rem;
@@ -1298,6 +1326,10 @@ footer dd {
 
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:mt-5 {
+    margin-top: 1.25rem;
   }
 
   .md\:w-6\/12 {

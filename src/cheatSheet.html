@@ -7,7 +7,7 @@
     <link href="./css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
 </head>
-<body class="theme2">
+<body class="theme2" id="top">
     <div class="container">
         <header class="theme1">
             <h1 class="logo"><a href="./index.html">Cheat Sheet</a></h1>
@@ -19,13 +19,26 @@
                 </dl>
             </nav>
         </header>
-        <main>
+        <main>      
             <h2 class="text-xl">Git</h2>
-            <div class="mt-5 pl-5 pr-5 max-w-screen-lg md:ml-auto md:mr-auto md:pl-0 md:pr-0">
+            <div class="mt-5 pl-5 pr-5 max-w-screen-lg md:ml-auto md:mr-auto md:pl-0 md:pr-0">           
+                <ol class="text-left mt-2 mb-2 pb-5 border-b border-b-white">
+                    <li>1. <a href="#index1" class="hover:underline">설치</a></li>
+                    <li>2. <a href="#index2" class="hover:underline">설정</a></li>
+                    <li>3. <a href="#index3" class="hover:underline">임시저장소와 형상 관리</a></li>
+                    <li>4. <a href="#index4" class="hover:underline">리모트 저장소</a></li>
+                    <li>5. <a href="#index5" class="hover:underline">브랜치</a></li>
+                    <li>6. <a href="#index6" class="hover:underline">머지(병합)</a></li>
+                    <li>7. <a href="#index7" class="hover:underline">스태시(임시 저장)</a></li>
+                    <li>7. <a href="#index10" class="hover:underline">untracked 파일 삭제(CLEAN)</a></li>
+                    <li>7. <a href="#index11" class="hover:underline">diff</a></li>
+                    <li>8. <a href="#index8" class="hover:underline">*refusing to merge unrelated histories 오류</a></li>
+                    <li>9. <a href="#index9" class="hover:underline">*pull로 받을 수 없는 경우</a></li>
+                </ol> 
                 <ul class="overflow-hidden text-left w-full md:-ml-2">
                     <li class="float-left w-full md:w-6/12">
                         <div class="md:ml-5">
-                            <h4 class="font-bold">설치</h4>
+                            <h4 class="font-bold" id="index1">설치</h4>
                             <p class="mt-2 mb-2">해당 디렉토리에 .git 설치</p>
                             <pre><code class="language-plaintext">&> git init</code></pre>
                             <p class="mt-2 mb-2">리모트 저장소에서 복사해오기</p>
@@ -34,7 +47,7 @@
                             <pre><code class="language-plaintext">$> git clone [git url] [디렉토리명]</code></pre> 
                         </div>
                         <div class="md:ml-5 mt-5 pt-2 border-t border-t-white pb-5 border-b border-b-white md:border-b-0 md:pb-2">
-                            <h4 class="font-bold">설정</h4>
+                            <h4 class="font-bold" id="index2">설정</h4>
                             <p class="mt-2 mb-2">Git 설정 보기</p>
                             <pre><code class="language-plaintext">$> git config --list</code></pre> 
                             <p class="mt-2 mb-2">이름 설정<br>*이름과 이메일이 맞아야 연결이 가능하다</p>
@@ -57,7 +70,7 @@
                     </li>
                     <li class="float-left w-full mt-2 md:w-6/12 md:mt-0 border-b border-b-white md:border-b-0 md:pb-2">
                         <div class="md:ml-5 pb-5">
-                            <h4 class="font-bold">임시 저장소(STAGE)와 형상(SNAPSHOT) 관리</h4>
+                            <h4 class="font-bold" id="index3">임시 저장소(STAGE)와 형상(SNAPSHOT) 관리</h4>
                             <p class="mt-2 mb-2">현재 Git 상태 확인</p>
                             <pre><code class="language-plaintext">$> git status</code></pre>
                             <p class="mt-2 mb-2">tracked 파일 확인</p>
@@ -99,7 +112,7 @@
                 <ul class="overflow-hidden mt-2 text-left w-full md:-ml-2 md:mt-5">
                     <li class="float-left w-full md:w-6/12 border-b pb-5 border-b-white md:border-b-0 md:pb-2">
                         <div class="md:ml-5">
-                            <h4 class="font-bold">리모트 저장소(Remote Repository)</h4>
+                            <h4 class="font-bold" id="index4">리모트 저장소(Remote Repository)</h4>
                             <p class="mt-2 mb-2">연결하기<br>*GitHub에서 remote repository 생성 후 진행</p>
                             <pre><code class="language-plaintext">$> cd [워킹 디렉토리] #생성해놓은 디렉토리로 이동</code></pre>
                             <p class="mt-2 mb-2">url 추가</p>
@@ -115,7 +128,7 @@
                             <p class="mt-2 mb-2">서버의 최신 소스 다운받기</p>
                             <pre><code class="language-plaintext">$> git pull [리모트 이름] [브랜치 이름]</code></pre>
                             <pre><code class="language-plaintext">$> git pull #fetch + merge와 같다. 파이프라인 연결하면 push와 마찬가지로 단독 사용 가능</code></pre>
-                            <p class="mt-2 mb-2">오류시 처리 방법<br>*pull을 먼저 하고 작업을 해야 한다.</p>
+                            <p class="mt-2 mb-2" id="index8">오류시 처리 방법<br>*pull을 먼저 하고 작업을 해야 한다.</p>
                             <p class="mt-2 mb-2">refusing to merge unrelated histories 오류</p>
                             <pre><code class="language-plaintext">$> git pull origin master --allow-unrelated-histories</code></pre>
                             <p class="mt-2 mb-2">리모트 연결 정보 확인 및 이름 변경</p>
@@ -135,8 +148,8 @@
                         </div>
                     </li>
                     <li class="float-left w-full mt-2 md:w-6/12 md:mt-0 pb-5 border-b pb-5 border-b-white md:border-b-0 md:pb-2">
-                        <div class="md:ml-5 pt-2">
-                            <h4 class="font-bold">브랜치(BRANCH)</h4>
+                        <div class="md:ml-5">
+                            <h4 class="font-bold" id="index5">브랜치(BRANCH)</h4>
                             <p class="mt-2 mb-2">브랜치 사용하기</p>
                             <pre><code class="language-plaintext">$> git branch #전체 브랜치 확인</code></pre>
                             <pre><code class="language-plaintext">$> git branch -v #각 브랜치의 HEAD pointer 확인</code></pre>
@@ -163,7 +176,7 @@
                             <p class="mt-2 mb-2">push를 이용한 브랜치 삭제</p> 
                             <pre><code class="language-plaintext">$> git push --delete [리모트 이름] [브랜치 이름]</code></pre> 
                             <pre><code class="language-plaintext">$> git push -d [리모드 이름] [브랜치 이름]</code></pre>
-                            <p class="mt-2 mb-2">리모트와 로컬 작업 중인 동일 파일이 diff가 있는데 pull로 받을 수 없는 경우</p>
+                            <p class="mt-2 mb-2" id="index9">리모트와 로컬 작업 중인 동일 파일이 diff가 있는데 pull로 받을 수 없는 경우</p>
                             <pre><code class="language-plaintext">$> #여러가지 이유로 리모트가 로컬의 diff를 인식하지 못할 때가 있다.</code></pre> 
                             <pre><code class="language-plaintext">$> git fetch -p #로컬의 .git에 리모트 파일들을 가져온다</code></pre>
                             <pre><code class="language-plaintext">$> git merge [리모트 이름]/[브랜치 이름] #리모트 파일을 로컬에 가져왔기 때문에 로컬에서 직접 비교 가능</code></pre>
@@ -173,30 +186,61 @@
                 <ul class="overflow-hidden mt-2 text-left w-full md:-ml-2 md:mt-5">
                     <li class="float-left w-full md:w-6/12 border-b pb-5 border-b-white md:border-b-0 md:pb-2">
                         <div class="md:ml-5 pb-5 border-b border-b-white">
-                            <h4 class="font-bold">머지(MERGE)</h4>
+                            <h4 class="font-bold" id="index6">머지(MERGE)</h4>
                             <p class="mt-2 mb-2">다른 브랜치의 diff들을 현재 브랜치에 병합하기<br>*항상 merge를 실행하는 쪽으로 이동해서 해야 한다<br>(땡겨온다는 개념)</p>
                             <pre><code class="language-plaintext">$> git fetch -p #로컬 .git에 리모트의 모든 파일들 다운받기</code></pre>
                             <pre><code class="language-plaintext">$> git merge [브랜치 이름] #해당 브랜치와 현재 브랜치를 합치기</code></pre>
                         </div>
-                        <div class="md:ml-5 pt-2 pb-5 border-b border-b-white">
-                            <h4 class="font-bold">스태시(STASH)</h4>
-                            <p class="mt-2 mb-2">작업중(commit 전)인데 긴급 수정이 있을 때 처리 방법</p>
-                            <pre><code class="language-plaintext">$> git stash save #현재 작업 중인 </code></pre>
-                            <pre><code class="language-plaintext">$> git </code></pre>
-                            <pre><code class="language-plaintext">$> git </code></pre>
-                            <pre><code class="language-plaintext">$> git </code></pre>
-                            <pre><code class="language-plaintext">$> git </code></pre>
+                        <div class="md:ml-5 pt-2">
+                            <h4 class="font-bold" id="index7">스태시(STASH)</h4>
+                            <p class="mt-2 mb-2">작업중(commit 전)인데 긴급 수정이 있을 때 처리 방법<br>*스태시 (임시 저장 후 최근 커밋 상태로 돌아감)</p>
+                            <pre><code class="language-plaintext">$> git stash save #현재 작업 중인 파일을 "스택 형식"으로 따로 저장한다.</code></pre>
+                            <pre><code class="language-plaintext">$> git stash save "label" #label에 해당하는 메세지를 남기며 저장한다.</code></pre>
+                            <p class="mt-2 mb-2">스태시 확인하기</p>
+                            <pre><code class="language-plaintext">$> cat .git/refs/stash #cat 명령어로 파일 직접 읽기</code></pre>
+                            <pre><code class="language-plaintext">$> git stash list #스태시 목록 불러오기</code></pre>
+                            <pre><code class="language-plaintext">$> #구분이 힘들 것 같다면 "label"를 적극 이용하자</code></pre>
+                            <pre><code class="language-plaintext">$> git stash show #스태시 log 보기</code></pre>
+                            <pre><code class="language-plaintext">$> git stash show -p [WIP] #상세 log 보기</code></pre>
+                            <pre><code class="language-plaintext">$> #WIP(Work In Progress)은 stash@{num}형태</code></pre>
+                            <p class="mt-2 mb-2">스태시 사용법</p>
+                            <pre><code class="language-plaintext">$> git stash pop #스태시 꺼내기 LIFO (auto-merge!)</code></pre>
+                            <pre><code class="language-plaintext">$> git stash apply stash@{스태시 번호}</code></pre>
+                            <pre><code class="language-plaintext">$> #스태시는 사라지지 않고 그 상태로만 복원</code></pre>
+                            <pre><code class="language-plaintext">$> git stash drop #마지막 스태시 삭제</code></pre>
+                            <pre><code class="language-plaintext">$> git stash drop stash@{스태시 번호} #특정 스태시 삭제</code></pre>
+                            <p class="mt-2 mb-2">스태시 저장된 내역으로 브랜치 생성</p>
+                            <pre><code class="language-plaintext">$> git stash branch [브랜치 이름] #임시로 사용하고 삭제할 브랜치</code></pre>
+                            <pre><code class="language-plaintext">$> #정확한 작업 내용을 이름으로 적어놓는 게 편할 수 있다</code></pre>
                         </div>
                     </li>
                     <li class="float-left w-full mt-2 md:w-6/12 md:mt-0 md:pb-2">
                         <div class="md:ml-5 pb-5 border-b border-b-white">
-                            <h4 class="font-bold mb-2">기록(commit log)</h4>
-                            <pre><code class="language-plaintext">$> git </code></pre>  
+                            <h4 class="font-bold mb-2" id="index10">untracked 파일 삭제(CLEAN)</h4>
+                            <pre><code class="language-plaintext">$> git clean -h #clean 도움말(옵션 보기)</code></pre>
+                            <pre><code class="language-plaintext">$> git clean -n #clean 시 삭제 될 파일 목록 보기</code></pre>
+                            <pre><code class="language-plaintext">$> #.gitignore에 정의된 파일은 대상이 아니다.</code></pre>
+                            <p class="mt-2 mb-2">untracked files only</p>
+                            <pre><code class="language-plaintext">$> git clean -d #untracked files only</code></pre>
+                            <pre><code class="language-plaintext">$> git clean -di #안전하게 하나하나 물어보면서 삭제</code></pre>
+                            <pre><code class="language-plaintext">$> git clean -df #묻지 않고 삭제</code></pre>
+                            <p class="mt-2 mb-2">untracked files with ingnore file too</p>
+                            <pre><code class="language-plaintext">$> git clean -x #with ignore too</code></pre>
+                            <pre><code class="language-plaintext">$> git clean -xi #안전하게 하나하나 물어보면서 삭제</code></pre>
+                            <pre><code class="language-plaintext">$> git clean -xf #묻지 않고 전부 삭제</code></pre>
+                            <p class="mt-2 mb-2">ingnore file only</p>
+                            <pre><code class="language-plaintext">$> git clean -X #only ignore files</code></pre>
                         </div>
                         <div class="md:ml-5 pt-2 pb-5 border-b border-b-white">
-                            <h4 class="font-bold"></h4>
-                            <p class="mt-2 mb-2"></p>
-                            <pre><code class="language-plaintext">$> git </code></pre>
+                            <h4 class="font-bold" id="index11">diff</h4>
+                            <p class="mt-2 mb-2">staged가 아닌 파일들에서 차이점 보여주기</p>
+                            <pre><code class="language-plaintext">$> git diff</code></pre> 
+                            <p class="mt-2 mb-2">staged 상태에서 아직 commit 되지 않은 파일들의 차이점 보여주기</p>
+                            <pre><code class="language-plaintext">$> git diff --staged</code></pre>
+                            <p class="mt-2 mb-2">conflict 이후 비교</p>
+                            <pre><code class="language-plaintext">$> git diff --ours #내 작업을 강조해서 보여준다.</code></pre>
+                            <pre><code class="language-plaintext">$> git diff --theirs #타 작업을 강조해서 보여준다.</code></pre>
+                            <pre><code class="language-plaintext">$> git diff --base</code></pre>
                         </div>
                         <div class="md:ml-5 pt-2 pb-5 border-b border-b-white">
                             <h4 class="font-bold">제목</h4>
@@ -212,6 +256,7 @@
                         </div>
                     </li>
                 </ul>
+                <p class="text-center mt-5"><a href="#top" class="btn">위로가기</a></p>
             </div>
         </main>
         <footer>
