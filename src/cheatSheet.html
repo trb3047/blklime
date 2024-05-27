@@ -125,21 +125,78 @@
                             <pre><code class="language-plaintext">$> git remote rm [리모트 이름] #연결 해제</code></pre>
                             <p class="mt-2 mb-2">리모트 저장소 정보 확인</p>
                             <pre><code class="language-plaintext">$> git remote show [리모트 이름]</code></pre>
+                            <p class="mt-2 mb-2">기록 확인하기</p>
+                            <pre><code class="language-plaintext">$> git show #마지막 commit log 확인</code></pre> 
+                            <pre><code class="language-plaintext">$> git log #전체 commit log 확인</code></pre> 
+                            <pre><code class="language-plaintext">$> git log --raw #파일명 추가해서 확인</code></pre> 
+                            <pre><code class="language-plaintext">$> git log --graph #커밋 트리를 그려서 보여준다</code></pre> 
+                            <pre><code class="language-plaintext">$> git log --oneline #1줄로 줄여서 보여준다, '커밋 ID' 확인 가능</code></pre>
+                            <pre><code class="language-plaintext">$> git reflog --raw #각 브랜치의 HEAD pointer, 커밋 ID, 파일명 확인 가능</code></pre>  
+                        </div>
+                    </li>
+                    <li class="float-left w-full mt-2 md:w-6/12 md:mt-0 pb-5 border-b pb-5 border-b-white md:border-b-0 md:pb-2">
+                        <div class="md:ml-5 pt-2">
+                            <h4 class="font-bold">브랜치(BRANCH)</h4>
+                            <p class="mt-2 mb-2">브랜치 사용하기</p>
+                            <pre><code class="language-plaintext">$> git branch #전체 브랜치 확인</code></pre>
+                            <pre><code class="language-plaintext">$> git branch -v #각 브랜치의 HEAD pointer 확인</code></pre>
+                            <pre><code class="language-plaintext">$> git branch -r #연결되어 있는 리모트 저장소 확인</code></pre>
+                            <pre><code class="language-plaintext">$> git branch -a #브랜치+리모트 확인</code></pre>
+                            <pre><code class="language-plaintext">$> git branch [브랜치 이름] #브랜치 생성</code></pre> 
+                            <pre><code class="language-plaintext">$> git checkout [브랜치 이름] #브랜치 전환</code></pre> 
+                            <pre><code class="language-plaintext">$> git checkout - #이전 브랜치로 전환</code></pre> 
+                            <pre><code class="language-plaintext">$> git checkout -b [브랜치 이름] #브랜치 생성 + 전환</code></pre> 
+                            <pre><code class="language-plaintext">$> git switch [브랜치 이름] #브랜치 전환</code></pre> 
+                            <pre><code class="language-plaintext">$> git switch -c [브랜치 이름] #브랜치 생성 + 전환</code></pre> 
+                            <pre><code class="language-plaintext">$> git merge [브랜치 이름]</code></pre> 
+                            <p class="mt-2 mb-2">현재 브랜치의 기록을 보기</p>
+                            <pre><code class="language-plaintext">$> git log [브랜치 이름]</code></pre> 
+                            <pre><code class="language-plaintext">$> git log [브랜치 이름] --graph #해당 브랜치의 커밋 트리를 보여준다</code></pre> 
+                            <p class="mt-2 mb-2">HASH값 보기</p>
+                            <pre><code class="language-plaintext">$> git rev-parse [커밋 혹은 브랜치 이름] #해당 HASH값을 보여준다</code></pre> 
+                            <pre><code class="language-plaintext">$> git rev-parse HEAD #HEAD pointer의 HASH값을 보여준다</code></pre>
+                            <pre><code class="language-plaintext">$> git rev-parse HEAD~1 #HEAD~1 = HEAD^ '^개수 or ~숫자를 통해 이전 커밋의 HASH값도 확인 가능</code></pre>  
+                            <p class="mt-2 mb-2">브랜치 삭제하기</p>
+                            <pre><code class="language-plaintext">$> git branch -d [브랜치 이름] #현재 위치한 브랜치는 삭제 불가</code></pre> 
+                            <pre><code class="language-plaintext">$> git branch -delete [브랜치 이름] #-d와 같다.</code></pre> 
+                            <pre><code class="language-plaintext">$> git branch -D [브랜치 이름] #강제로 삭제한다.</code></pre> 
+                            <p class="mt-2 mb-2">push를 이용한 브랜치 삭제</p> 
+                            <pre><code class="language-plaintext">$> git push --delete [리모트 이름] [브랜치 이름]</code></pre> 
+                            <pre><code class="language-plaintext">$> git push -d [리모드 이름] [브랜치 이름]</code></pre>
+                            <p class="mt-2 mb-2">리모트와 로컬 작업 중인 동일 파일이 diff가 있는데 pull로 받을 수 없는 경우</p>
+                            <pre><code class="language-plaintext">$> #여러가지 이유로 리모트가 로컬의 diff를 인식하지 못할 때가 있다.</code></pre> 
+                            <pre><code class="language-plaintext">$> git fetch -p #로컬의 .git에 리모트 파일들을 가져온다</code></pre>
+                            <pre><code class="language-plaintext">$> git merge [리모트 이름]/[브랜치 이름] #리모트 파일을 로컬에 가져왔기 때문에 로컬에서 직접 비교 가능</code></pre>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="overflow-hidden mt-2 text-left w-full md:-ml-2 md:mt-5">
+                    <li class="float-left w-full md:w-6/12 border-b pb-5 border-b-white md:border-b-0 md:pb-2">
+                        <div class="md:ml-5 pb-5 border-b border-b-white">
+                            <h4 class="font-bold">머지(MERGE)</h4>
+                            <p class="mt-2 mb-2">다른 브랜치의 diff들을 현재 브랜치에 병합하기<br>*항상 merge를 실행하는 쪽으로 이동해서 해야 한다<br>(땡겨온다는 개념)</p>
+                            <pre><code class="language-plaintext">$> git fetch -p #로컬 .git에 리모트의 모든 파일들 다운받기</code></pre>
+                            <pre><code class="language-plaintext">$> git merge [브랜치 이름] #해당 브랜치와 현재 브랜치를 합치기</code></pre>
+                        </div>
+                        <div class="md:ml-5 pt-2 pb-5 border-b border-b-white">
+                            <h4 class="font-bold">스태시(STASH)</h4>
+                            <p class="mt-2 mb-2">작업중(commit 전)인데 긴급 수정이 있을 때 처리 방법</p>
+                            <pre><code class="language-plaintext">$> git stash save #현재 작업 중인 </code></pre>
+                            <pre><code class="language-plaintext">$> git </code></pre>
+                            <pre><code class="language-plaintext">$> git </code></pre>
+                            <pre><code class="language-plaintext">$> git </code></pre>
+                            <pre><code class="language-plaintext">$> git </code></pre>
                         </div>
                     </li>
                     <li class="float-left w-full mt-2 md:w-6/12 md:mt-0 md:pb-2">
                         <div class="md:ml-5 pb-5 border-b border-b-white">
-                            <h4 class="font-bold">BRANCH와 MERGE</h4>
-                            <p class="mt-2 mb-2">브랜치 목록 보기</p>
-                            <pre><code class="language-plaintext">$> git branch</code></pre> 
-                            <p class="mt-2 mb-2">새 브랜치 만들기</p>
-                            <pre><code class="language-plaintext">$> git branch [브랜치 이름]</code></pre> 
-                            <p class="mt-2 mb-2">다른 브랜치로 이동</p>
-                            <pre><code class="language-plaintext">$> git checkout [브랜치 이름]</code></pre> 
-                            <p class="mt-2 mb-2">다른 브랜치에서 가져와 합치기</p>
-                            <pre><code class="language-plaintext">$> git merge [브랜치 이름]</code></pre> 
-                            <p class="mt-2 mb-2">현재 브랜치의 기록을 보기</p>
-                            <pre><code class="language-plaintext">$> git log</code></pre> 
+                            <h4 class="font-bold mb-2">기록(commit log)</h4>
+                            <pre><code class="language-plaintext">$> git </code></pre>  
+                        </div>
+                        <div class="md:ml-5 pt-2 pb-5 border-b border-b-white">
+                            <h4 class="font-bold"></h4>
+                            <p class="mt-2 mb-2"></p>
+                            <pre><code class="language-plaintext">$> git </code></pre>
                         </div>
                         <div class="md:ml-5 pt-2 pb-5 border-b border-b-white">
                             <h4 class="font-bold">제목</h4>
