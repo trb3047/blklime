@@ -29,11 +29,17 @@
                     <li>4. <a href="#index4" class="hover:underline">리모트 저장소</a></li>
                     <li>5. <a href="#index5" class="hover:underline">브랜치</a></li>
                     <li>6. <a href="#index6" class="hover:underline">머지(병합)</a></li>
-                    <li>7. <a href="#index7" class="hover:underline">스태시(임시 저장)</a></li>
-                    <li>8. <a href="#index10" class="hover:underline">untracked 파일 삭제(CLEAN)</a></li>
-                    <li>9. <a href="#index11" class="hover:underline">diff</a></li>
-                    <li>10. <a href="#index8" class="hover:underline">*refusing to merge unrelated histories 오류</a></li>
-                    <li>11. <a href="#index9" class="hover:underline">*pull로 받을 수 없는 경우</a></li>
+                    <li>7. <a href="#index12" class="hover:underline">*특정 파일만 머지하고 싶을 때</a></li>
+                    <li>8. <a href="#index7" class="hover:underline">스태시(임시 저장)</a></li>
+                    <li>9. <a href="#index10" class="hover:underline">untracked 파일 삭제(CLEAN)</a></li>
+                    <li>10. <a href="#index11" class="hover:underline">diff</a></li>
+                    <li>11. <a href="#index13" class="hover:underline">리베이스</a></li>
+                    <li>12. <a href="#index14" class="hover:underline">*리베이스의 conflict 처리</a></li>
+                    <li>13. <a href="#index15" class="hover:underline">*n개의 커밋을 하나로 합치기</a></li>
+                    <li>14. <a href="#index16" class="hover:underline">복귀, 되돌리기(reset, revert)</a></li>
+                    <li>15. <a href="#index17" class="hover:underline">태그(꼬리표)</a></li>
+                    <li>16. <a href="#index8" class="hover:underline">*refusing to merge unrelated histories 오류</a></li>
+                    <li>17. <a href="#index9" class="hover:underline">*pull로 받을 수 없는 경우</a></li>
                 </ol> 
                 <ul class="overflow-hidden text-left w-full md:-ml-2">
                     <li class="float-left w-full md:w-6/12">
@@ -43,7 +49,7 @@
                             <pre><code class="language-plaintext">&> git init</code></pre>
                             <p class="mt-2 mb-2">리모트 저장소에서 복사해오기</p>
                             <pre><code class="language-plaintext">$> git clone [git url]</code></pre>
-                            <p class="mt-2 mb-2">설정한 디렉토리 이름으로 Repo.에서 복사해오기</p>
+                            <p class="mt-2 mb-2">설정한 디렉토리 이름으로 리모트에서 복사해오기</p>
                             <pre><code class="language-plaintext">$> git clone [git url] [디렉토리명]</code></pre> 
                         </div>
                         <div class="md:ml-5 mt-5 pt-2 border-t border-t-white pb-5 border-b border-b-white md:border-b-0 md:pb-2">
@@ -96,6 +102,7 @@
                             <pre><code class="language-plaintext">$> git rm [파일명]</code></pre>
                             <pre><code class="language-plaintext">$> git rm -r [디렉토리명] #디렉토리 삭제</code></pre>
                             <pre><code class="language-plaintext">$> git rm --cache [파일명] #로컬의 파일은 남겨두고 삭제</code></pre>
+                            <pre><code class="language-plaintext">$> git rm -r --cache [디렉토리명] #로컬의 디렉토리는 남겨두고 삭제</code></pre>
                             <p class="mt-2 mb-2">파일 되돌리기</p>
                             <pre><code class="language-plaintext">$> git restore [파일명] #최근 커밋된 상태로</code></pre>
                             <pre><code class="language-plaintext">$> git restore --source [커밋 ID] [파일명] #특정 커밋의 상태로</code></pre>
@@ -175,7 +182,7 @@
                             <pre><code class="language-plaintext">$> git branch -D [브랜치 이름] #강제로 삭제한다.</code></pre> 
                             <p class="mt-2 mb-2">push를 이용한 브랜치 삭제</p> 
                             <pre><code class="language-plaintext">$> git push --delete [리모트 이름] [브랜치 이름]</code></pre> 
-                            <pre><code class="language-plaintext">$> git push -d [리모드 이름] [브랜치 이름]</code></pre>
+                            <pre><code class="language-plaintext">$> git push -d [리모트 이름] [브랜치 이름]</code></pre>
                             <p class="mt-2 mb-2" id="index9">리모트와 로컬 작업 중인 동일 파일이 diff가 있는데 pull로 받을 수 없는 경우</p>
                             <pre><code class="language-plaintext">$> #여러가지 이유로 리모트가 로컬의 diff를 인식하지 못할 때가 있다.</code></pre> 
                             <pre><code class="language-plaintext">$> git fetch -p #로컬의 .git에 리모트 파일들을 가져온다</code></pre>
@@ -190,6 +197,8 @@
                             <p class="mt-2 mb-2">다른 브랜치의 diff들을 현재 브랜치에 병합하기<br>*항상 merge를 실행하는 쪽으로 이동해서 해야 한다<br>(땡겨온다는 개념)</p>
                             <pre><code class="language-plaintext">$> git fetch -p #로컬 .git에 리모트의 모든 파일들 다운받기</code></pre>
                             <pre><code class="language-plaintext">$> git merge [브랜치 이름] #해당 브랜치와 현재 브랜치를 합치기</code></pre>
+                            <p class="mt-2 mb-2" id="index12">특정 파일만 머지하고 싶을 때</p>
+                            <pre><code class="language-plaintext">$> git checkout -p [가져올 파일이 있는 브랜치명] -- [파일 경로]</code></pre>
                         </div>
                         <div class="md:ml-5 pt-2">
                             <h4 class="font-bold" id="index7">스태시(STASH)</h4>
@@ -231,7 +240,7 @@
                             <p class="mt-2 mb-2">ingnore file only</p>
                             <pre><code class="language-plaintext">$> git clean -X #only ignore files</code></pre>
                         </div>
-                        <div class="md:ml-5 pt-2 pb-5 border-b border-b-white">
+                        <div class="md:ml-5 pt-2 pb-5 border-b border-b-white md:border-b-0 md:pb-2">
                             <h4 class="font-bold" id="index11">diff</h4>
                             <p class="mt-2 mb-2">staged가 아닌 파일들에서 차이점 보여주기</p>
                             <pre><code class="language-plaintext">$> git diff</code></pre> 
@@ -242,17 +251,79 @@
                             <pre><code class="language-plaintext">$> git diff --theirs #타 작업을 강조해서 보여준다.</code></pre>
                             <pre><code class="language-plaintext">$> git diff --base</code></pre>
                         </div>
-                        <div class="md:ml-5 pt-2 pb-5 border-b border-b-white">
-                            <h4 class="font-bold">제목</h4>
-                            <p class="mt-2 mb-2"></p>
-                            <pre><code class="language-plaintext">$> git </code></pre>
-                            <p class="mt-2 mb-2"></p>
-                            <pre><code class="language-plaintext">$> git </code></pre>
+                    </li>
+                </ul>
+                <ul class="overflow-hidden mt-2 text-left w-full md:-ml-2 md:mt-5">
+                    <li class="float-left w-full md:w-6/12 border-b pb-5 border-b-white md:border-b-0 md:pb-2">
+                        <div class="md:ml-5 pt-2">
+                            <h4 class="font-bold" id="index13">리베이스(REBASE)</h4>
+                            <p class="mt-2 mb-2">브랜치를 땄던 시점을 최신화<br>3way-merge를 최소화 하기 위해 사용<br>*push 전에 꼭 rebase 하자!</p>
+                            <pre><code class="language-plaintext">$> git rebase [브랜치 명] #해당 브랜치의 HEAD pointer로 base를 바꾼다</code></pre>
+                            <p class="mt-2 mb-2">리베이스의 confilct 처리<br>만약 같은 파일이 작업 중이었다면</p>
+                            <p class="mb-2"><img src="./img/ex_error1.png" alt="리베이스 conflict 예시" class="w-full"></p>
+                            <pre><code class="language-plaintext">$> git rebase --abort #rebase 취소</code></pre>
+                            <pre><code class="language-plaintext">$> git rebase --skip #main 소스 우선(내 것 무시)</code></pre>
+                            <pre><code class="language-plaintext">$> git rebase --continue #둘 다 수용</code></pre>
+                            <p class="mt-2 mb-2" id="index14">--continue의 경우 conflict 상태로 진행</p>
+                            <pre><code class="language-plaintext">$> #conflict 해결 후</code></pre>
+                            <pre><code class="language-plaintext">$> git rebase --continue #한 번 더 리베이스 해야 마무리</code></pre>
+                            <p class="mt-2 mb-2" id="index15">n개의 커밋을 하나로 합치기</p>
+                            <pre><code class="language-plaintext">$> git rebase -i HEAD~3 #예를 들어 3개의 커밋 목록을 선택</code></pre>
+                            <p class="mt-2 mb-2"><img src="./img/ex_rebase.png" alt="리베이스 pick" class="w-full"></p>
+                            <pre><code class="language-plaintext">$> #pick = 남길 커밋 ID</code></pre>
+                            <pre><code class="language-plaintext">$> #s = squash 합칠 커밋 ID</code></pre>
+                            <pre><code class="language-plaintext">$> #수정하고 :wq(저장하고 종료) 하면 완료
+$> #s로 선택한 커밋을 합치고 새로운 커밋이 생성된다</code></pre>
+                        </div>
+                    </li>
+                    <li class="float-left w-full mt-2 md:w-6/12 md:mt-0 md:pb-2">
+                        <div class="md:ml-5 pb-5 border-b border-b-white">
+                            <h4 class="font-bold mb-2" id="index16">복귀(RESET)</h4>
+                            <p class="mt-2 mb-2">커밋 ID를 변경하므로 push된 내역을 reset하면 안 된다<br>*push된 커밋은 reset 후 pull 요구</p>
+                            <pre><code class="language-plaintext">$> git reset --soft #리모트에서 임시저장소로</code></pre>
+                            <pre><code class="language-plaintext">$> git reset --mixed #리모트에서 WD(로컬)로 *modified 상태</code></pre>
+                            <pre><code class="language-plaintext">$> git reset --hard #리모트에서 수정 전으로 초기화 *unmodified 상태, 수정내역 삭제</code></pre>
+                            <pre><code class="language-plaintext">$> git reset --merge #merge 취소</code></pre>
+                            <p class="mt-2 mb-2">사용 예시 1)</p>
+                            <pre><code class="language-plaintext">$> git reset --mixed HEAD~1 #HEAD pointer 1개 전으로 수정내역 보존하며 초기화</code></pre>
+                            <pre><code class="language-plaintext">$> git reset --hard HEAD~1 #수정내역 삭제하며 초기화</code></pre>
+                            <p class="mt-2 mb-2">사용 예시 2) 임시저장소 되돌리기</p>
+                            <pre><code class="language-plaintext">$> git add -A #staged 생성</code></pre>
+                            <pre><code class="language-plaintext">$> git reset #--mixed HEAD 생략</code></pre>
+                            <pre><code class="language-plaintext">$> #add 취소, staged -> modified로 돌아간다</code></pre>
+                            <pre><code class="language-plaintext">$> git reset --hard #수정내역까지 삭제</code></pre>
+                            <p class="mt-2 mb-2">사용 예시 3) merge 취소</p>
+                            <pre><code class="language-plaintext">$> git merge [브랜치 이름]</code></pre>
+                            <pre><code class="language-plaintext">$> git reser --merge HEAD~1 #merge 취소</code></pre>
                         </div>
                         <div class="md:ml-5 mt-2 pt2">
-                            <h4 class="font-bold">제목</h4>
-                            <p class="mt-2 mb-2"></p>
-                            <pre><code class="language-plaintext">$> git</code></pre>
+                            <h4 class="font-bold">되돌리기(REVERT)</h4>
+                            <p class="mt-2 mb-2">기존 커밋 남겨두고 되돌리기 (push된 내역 되돌리기)</p>
+                            <pre><code class="language-plaintext">$> git commit -m "커밋 메세지"</code></pre>
+                            <pre><code class="language-plaintext">$> git revert HEAD #방금 전 커밋 취소</code></pre>
+                            <p class="mt-2 mb-2">마지막 커밋 수정 (ID 변경)</p>
+                            <pre><code class="language-plaintext">$> git commit --amend -m "수정 메세지"</code></pre>
+                            <p class="mt-2 mb-2">confilct 났을 경우</p>
+                            <pre><code class="language-plaintext">$> git revert --continue #conflict 수동 merge</code></pre>
+                            <pre><code class="language-plaintext">$> git revert --skip #내 작업내역 삭제하고 되돌리기</code></pre>
+                            <pre><code class="language-plaintext">$> git revert --abort #revert 취소</code></pre>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="overflow-hidden mt-2 text-left w-full md:-ml-2 md:mt-5">
+                    <li class="float-left w-full md:w-6/12 border-b pb-5 border-b-white md:border-b-0 md:pb-2">
+                        <div class="md:ml-5 pt-2">
+                            <h4 class="font-bold" id="index17">태그(TAG)</h4>
+                            <p class="mt-2 mb-2">배포 꼬리표 혹은 특정 커밋 태깅<br>*Annotated : 태그 + 정보<br>*Lightweight : 태그 이름만</p>
+                            <pre><code class="language-plaintext">$> git tag [태그 이름] #태그 생성, 이 후 태그 메세지를 입력하는 창이 나온다.</code></pre>
+                            <p class="mt-2 mb-2"><img src="./img/ex_tag.png" alt="tag 메세지 입력창" class="w-full"></p>
+                            <p class="mt-2 mb-2">tag 명령어, 사용법</p>
+                            <pre><code class="language-plaintext">$> git tag -l #태그 목록 보기</code></pre>
+                            <pre><code class="language-plaintext">$> git tag -d [태그 이름] #태그 삭제</code></pre>
+                            <pre><code class="language-plaintext">$> git show [태그 이름] #해당 태그의 변경 사항 상세 보기</code></pre>
+                            <pre><code class="language-plaintext">$> git checkout [태그 이름] #해당 태그로 전환</code></pre>
+                            <pre><code class="language-plaintext">$> git checkout -b [브랜치 이름] [태그 이름] #생성한 브랜치로 전환, 태그 생성</code></pre>
+                            <pre><code class="language-plaintext">$> git push origin [태그 이름] #push</code></pre>
                         </div>
                     </li>
                 </ul>
