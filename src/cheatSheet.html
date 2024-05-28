@@ -125,7 +125,7 @@
                             <p class="mt-2 mb-2">url 추가</p>
                             <pre><code class="language-plaintext">$> git remote add [리모트 이름] [리모트 url]</code></pre>
                             <pre><code class="language-plaintext">$> cat .git/config #git 설정 확인</code></pre>
-                            <pre><code class="language-plaintext">$> git remote show [remote 이름]</code></pre>
+                            <pre><code class="language-plaintext">$> git remote show [remote 이름] #리모트 연결 정보 확인</code></pre>
                             <p class="mt-2 mb-2">Master 브랜치 이름 변경<br>*master 단어의 유래 때문에 main의 사용을 권장하고 있다.</p>
                             <pre><code class="language-plaintext">$> git branch -M main #main으로 브랜치 이름 설정</code></pre>
                             <p class="mt-2 mb-2">파이프라인 연결<br>*-u 옵션을 사용하면 이후에는 같은 방향으로 push 단독 사용을 할 수 있다.</p>
@@ -137,7 +137,7 @@
                             <pre><code class="language-plaintext">$> git pull #fetch + merge와 같다. 파이프라인 연결하면 push와 마찬가지로 단독 사용 가능</code></pre>
                             <p class="mt-2 mb-2" id="index8">오류시 처리 방법<br>*pull을 먼저 하고 작업을 해야 한다.</p>
                             <p class="mt-2 mb-2">refusing to merge unrelated histories 오류</p>
-                            <pre><code class="language-plaintext">$> git pull origin master --allow-unrelated-histories</code></pre>
+                            <pre><code class="language-plaintext">$> git pull [리모트 이름] [브랜치 이름] --allow-unrelated-histories</code></pre>
                             <p class="mt-2 mb-2">리모트 연결 정보 확인 및 이름 변경</p>
                             <pre><code class="language-plaintext">$> git remote -v #리모트 연결 정보 확인</code></pre>
                             <pre><code class="language-plaintext">$> git remote add [리모트 이름] [리모트 url] #리모트 등록</code></pre>
