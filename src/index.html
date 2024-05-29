@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹사이트 제작 솔루션</title>
     <link href="./css/output.css" rel="stylesheet">
-    <script type="text/javascript">
-      window.open("./design/index.html","_self");
-    </script>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    포트폴리오 사이트에 어서오세요!<br>최성훈
-  </h1>
-  <p>혹시나 바로 연결이 되지 않는다면 리다이렉트 연결을 허용해주세요!</p>
+<body class="theme2">
+    <div id="root"></div>
+    <!-- 만든 React 컴포넌트를 실행. -->
+    <!-- 주의: 사이트를 배포할 때는 "development.js"를 "production.min.js"로 대체하세요. -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="../App.js"></script>
+
 </body>
 </html>
