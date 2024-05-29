@@ -17,9 +17,9 @@ class Header extends React.Component {
             <nav>
                 <dl>
                     <dt className="blind">메뉴</dt>
-                    <dd><a href="./index.html" className="on">디자인</a></dd>
-                    <dd><a href="./info.html">개발자 정보</a></dd>
-                    <dd><a href="./login.html">로그인</a></dd>
+                    <dd><a href="./design/index.html" target="_blank" className="on">디자인</a></dd>
+                    <dd><a href="./design/info.html" target="_blank">개발자 정보</a></dd>
+                    <dd><a href="./design/login.html" target="_blank">로그인</a></dd>
                 </dl>
             </nav>
         </header>
@@ -58,7 +58,7 @@ class Sample extends React.Component {
                     {this.samList.map((cont, index) => {
                         return (
                     <li key={index}>
-                        <a href="./edit.html" className="box on" target="_blank">
+                        <a href="./design/edit.html" className="box on" target="_blank">
                             <p className="img"><img src="./" alt="디자인 대표 화면 이미지" /></p>
                             <div className="contBox">
                                 <h3 className="tit">{cont} {index+1}번</h3>

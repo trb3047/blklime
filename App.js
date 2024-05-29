@@ -56,7 +56,7 @@ var Header = function (_React$Component) {
                             null,
                             React.createElement(
                                 "a",
-                                { href: "./index.html", className: "on" },
+                                { href: "./design/index.html", target: "_blank", className: "on" },
                                 "\uB514\uC790\uC778"
                             )
                         ),
@@ -65,7 +65,7 @@ var Header = function (_React$Component) {
                             null,
                             React.createElement(
                                 "a",
-                                { href: "./info.html" },
+                                { href: "./design/info.html", target: "_blank" },
                                 "\uAC1C\uBC1C\uC790 \uC815\uBCF4"
                             )
                         ),
@@ -74,7 +74,7 @@ var Header = function (_React$Component) {
                             null,
                             React.createElement(
                                 "a",
-                                { href: "./login.html" },
+                                { href: "./design/login.html", target: "_blank" },
                                 "\uB85C\uADF8\uC778"
                             )
                         )
@@ -166,7 +166,7 @@ var Sample = function (_React$Component2) {
                             { key: index },
                             React.createElement(
                                 "a",
-                                { href: "./edit.html", className: "box on", target: "_blank" },
+                                { href: "./design/edit.html", className: "box on", target: "_blank" },
                                 React.createElement(
                                     "p",
                                     { className: "img" },
