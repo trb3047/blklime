@@ -33,8 +33,8 @@ class Header extends React.Component {
                     {menu.map((val, index) => {
                         let link = "./index.html?page=" + val[1];
                         let nowPage = "";
-                        if(val[1] == this.page) nowPage = "on";
-                        if(index == 0 && this.page == "edit") nowPage = "on";
+                        if(val[1] == this.page || (index == 0 && this.page == "edit")) nowPage = "on";
+                        
                         return (
                         <dd key={index}><a href={link} className={nowPage}>{val[0]}</a></dd>
                         );
