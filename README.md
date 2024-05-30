@@ -1,5 +1,5 @@
  프론트엔드 - react, tailwindcss / 백엔드 - nodejs
- * react, tailwindcss / nginx, AWS EC2 적용 완료  
+***react, tailwindcss / nginx, AWS EC2 적용 완료***
  위의 기술을 적용해서 만드는 "웹사이트 제작 솔루션"을 개발하고 있습니다.  
  
  목표 구현 기능
