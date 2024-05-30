@@ -30,16 +30,17 @@
                     <li>5. <a href="#index5" class="hover:underline">브랜치</a></li>
                     <li>6. <a href="#index6" class="hover:underline">머지(병합)</a></li>
                     <li>7. <a href="#index12" class="hover:underline">*특정 파일만 머지하고 싶을 때</a></li>
-                    <li>8. <a href="#index7" class="hover:underline">스태시(임시 저장)</a></li>
-                    <li>9. <a href="#index10" class="hover:underline">untracked 파일 삭제(CLEAN)</a></li>
-                    <li>10. <a href="#index11" class="hover:underline">diff</a></li>
-                    <li>11. <a href="#index13" class="hover:underline">리베이스</a></li>
-                    <li>12. <a href="#index14" class="hover:underline">*리베이스의 conflict 처리</a></li>
-                    <li>13. <a href="#index15" class="hover:underline">*n개의 커밋을 하나로 합치기</a></li>
-                    <li>14. <a href="#index16" class="hover:underline">복귀, 되돌리기(reset, revert)</a></li>
-                    <li>15. <a href="#index17" class="hover:underline">태그(꼬리표)</a></li>
-                    <li>16. <a href="#index8" class="hover:underline">*refusing to merge unrelated histories 오류</a></li>
-                    <li>17. <a href="#index9" class="hover:underline">*pull로 받을 수 없는 경우</a></li>
+                    <li>8. <a href="#index18" class="hover:underline">*커밋 기록을 하나로 합치며 머지!</a></li>
+                    <li>9. <a href="#index7" class="hover:underline">스태시(임시 저장)</a></li>
+                    <li>10. <a href="#index10" class="hover:underline">untracked 파일 삭제(CLEAN)</a></li>
+                    <li>11. <a href="#index11" class="hover:underline">diff</a></li>
+                    <li>12. <a href="#index13" class="hover:underline">리베이스</a></li>
+                    <li>13. <a href="#index14" class="hover:underline">*리베이스의 conflict 처리</a></li>
+                    <li>14. <a href="#index15" class="hover:underline">*n개의 커밋을 하나로 합치기</a></li>
+                    <li>15. <a href="#index16" class="hover:underline">복귀, 되돌리기(reset, revert)</a></li>
+                    <li>16. <a href="#index17" class="hover:underline">태그(꼬리표)</a></li>
+                    <li>17. <a href="#index8" class="hover:underline">*refusing to merge unrelated histories 오류</a></li>
+                    <li>18. <a href="#index9" class="hover:underline">*pull로 받을 수 없는 경우</a></li>
                 </ol> 
                 <ul class="overflow-hidden text-left w-full md:-ml-2">
                     <li class="float-left w-full md:w-6/12">
@@ -199,7 +200,9 @@
                             <pre><code class="language-plaintext">$> git fetch -p #로컬 .git에 리모트의 모든 파일들 다운받기</code></pre>
                             <pre><code class="language-plaintext">$> git merge [브랜치 이름] #해당 브랜치와 현재 브랜치를 합치기</code></pre>
                             <p class="mt-2 mb-2" id="index12">특정 파일만 머지하고 싶을 때</p>
-                            <pre><code class="language-plaintext">$> git checkout -p [가져올 파일이 있는 브랜치명] -- [파일 경로]</code></pre>
+                            <pre><code class="language-plaintext">$> git checkout -p [가져올 파일이 있는 브랜치 이름] -- [파일 경로]</code></pre>
+                            <p class="mt-2 mb-2" id="index18">커밋 기록을 지우며 합치고 싶을 때</p>
+                            <pre><code class="language-plaintext">$> git merge --squash [합칠 브랜치 이름 #해당 브랜치의 커밋 기록을 합치며 가져온다</code></pre>
                         </div>
                         <div class="md:ml-5 pt-2">
                             <h4 class="font-bold" id="index7">스태시(STASH)</h4>
