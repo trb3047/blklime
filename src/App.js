@@ -25,13 +25,18 @@ function getPage() {
 var Header = function (_React$Component) {
     _inherits(Header, _React$Component);
 
-    function Header(props) {
+    function Header() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, Header);
 
-        var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
 
-        _this.page = getPage();
-        return _this;
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Header.__proto__ || Object.getPrototypeOf(Header)).call.apply(_ref, [this].concat(args))), _this), _this.page = getPage(), _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Header, [{
@@ -65,8 +70,8 @@ var Header = function (_React$Component) {
                         menu.map(function (val, index) {
                             var link = "./index.html?page=" + val[1];
                             var nowPage = "";
-                            if (val[1] == _this2.page) nowPage = "on";
-                            if (index == 0 && _this2.page == "edit") nowPage = "on";
+                            if (val[1] == _this2.page || index == 0 && _this2.page == "edit") nowPage = "on";
+
                             return React.createElement(
                                 "dd",
                                 { key: index },
@@ -126,21 +131,25 @@ function Footer(props) {
 var Page = function (_React$Component2) {
     _inherits(Page, _React$Component2);
 
-    function Page(props) {
+    function Page() {
+        var _ref2;
+
+        var _temp2, _this3, _ret2;
+
         _classCallCheck(this, Page);
 
-        var _this3 = _possibleConstructorReturn(this, (Page.__proto__ || Object.getPrototypeOf(Page)).call(this, props));
+        for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+            args[_key2] = arguments[_key2];
+        }
 
-        _this3.samList = ["디자인", "디자인", "디자인", "디자인", "디자인", "디자인", "디자인", "디자인"];
-
-        _this3.page = getPage();
-        return _this3;
+        return _ret2 = (_temp2 = (_this3 = _possibleConstructorReturn(this, (_ref2 = Page.__proto__ || Object.getPrototypeOf(Page)).call.apply(_ref2, [this].concat(args))), _this3), _this3.page = getPage(), _this3.samList = ["디자인", "디자인", "디자인", "디자인", "디자인", "디자인", "디자인", "디자인"], _temp2), _possibleConstructorReturn(_this3, _ret2);
     }
-    //디자인 페이지 애니메이션 이벤트
-
 
     _createClass(Page, [{
         key: "listOn",
+
+
+        //디자인 페이지 애니메이션 이벤트
         value: function listOn() {
             window.onload = function () {
                 var list = document.querySelectorAll(".sampleList .box");
