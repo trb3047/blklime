@@ -18,11 +18,8 @@ function getPage() {
 
 //상단 레이아웃
 class Header extends React.Component {
-    constructor(props) {
-        super(props);
-        this.page = getPage();
-    }
-
+    page = getPage();
+    
     render() {
         return (
             <header className="theme1">
@@ -62,10 +59,8 @@ function Footer(props) {
 
 //페이지
 class Page extends React.Component {
-    constructor(props) {
-        super(props);
-        this.page = getPage();
-    }
+    page = getPage();
+
     //디자인 페이지 애니메이션 이벤트
     listOn() {
         window.onload = function(){
