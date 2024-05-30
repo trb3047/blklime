@@ -8,6 +8,9 @@
 .btn.join {
     @apply bg-green-700;
 }
+.btn + .btn {
+    @apply ml-2;
+}
 
 /* 버튼 효과 */
 .btn:hover {

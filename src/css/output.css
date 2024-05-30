@@ -637,7 +637,7 @@ nav dd {
 }
 
 nav dd + dd::before, footer dd + dd::before {
-  content:"| ";
+  content:" | ";
 }
 
 nav a:hover, footer a:hover, nav a.on {
@@ -761,6 +761,10 @@ footer dd {
 .btn.join {
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+}
+
+.btn + .btn {
+  margin-left: 0.5rem;
 }
 
 /* 버튼 효과 */
@@ -1180,10 +1184,6 @@ footer dd {
   margin-bottom: 0.5rem;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1268,11 +1268,6 @@ footer dd {
   text-align: left;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1285,10 +1280,6 @@ footer dd {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .hover\:underline:hover {

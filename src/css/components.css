@@ -25,7 +25,7 @@ nav dd {
     @apply inline;
 }
 nav dd + dd::before, footer dd + dd::before {
-    content:"| ";
+    content:" | ";
 }
 nav a:hover, footer a:hover, nav a.on {
     @apply underline;
