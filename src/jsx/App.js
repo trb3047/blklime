@@ -257,8 +257,8 @@ class Page extends React.Component {
                             </ul>
                         </form>
                         <div class="btnGroup">
-                            <a href="./index.html" class="btn">취소</a>
-                            <a href="./index.html" class="btn join">회원가입</a>
+                            <a href="./" class="btn">취소</a>
+                            <a href="./" class="btn join">회원가입</a>
                         </div>
                     </div>
                     <div class="bgImgWeb"><span class="blind">웹사이트 모양 이미지</span></div>
@@ -284,8 +284,8 @@ function Login() {
                 <a href="#">비밀번호 찾기</a>
             </p>
             <div className="btnGroup">
-                <a href="./index.html" className="btn apply">로그인</a>
-                <a href="./index.html?page=join" className="btn join">회원가입</a>
+                <a href="./" className="btn apply">로그인</a>
+                <a href="./?page=join" className="btn join">회원가입</a>
             </div>
         </div>
     );

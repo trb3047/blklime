@@ -754,12 +754,12 @@ var Page = function (_React$Component2) {
                                             { "class": "btnGroup" },
                                             React.createElement(
                                                 "a",
-                                                { href: "./index.html", "class": "btn" },
+                                                { href: "./", "class": "btn" },
                                                 "\uCDE8\uC18C"
                                             ),
                                             React.createElement(
                                                 "a",
-                                                { href: "./index.html", "class": "btn join" },
+                                                { href: "./", "class": "btn join" },
                                                 "\uD68C\uC6D0\uAC00\uC785"
                                             )
                                         )
@@ -836,12 +836,12 @@ function Login() {
             { className: "btnGroup" },
             React.createElement(
                 "a",
-                { href: "./index.html", className: "btn apply" },
+                { href: "./", className: "btn apply" },
                 "\uB85C\uADF8\uC778"
             ),
             React.createElement(
                 "a",
-                { href: "./index.html?page=join", className: "btn join" },
+                { href: "./?page=join", className: "btn join" },
                 "\uD68C\uC6D0\uAC00\uC785"
             )
         )
