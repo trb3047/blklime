@@ -23,12 +23,12 @@ class Header extends React.Component {
     render() {
         return (
             <header className="theme1">
-                <h1 className="logo"><a href="./index.html">포트폴리오</a></h1>
+                <h1 className="logo"><a href="./">포트폴리오</a></h1>
                 <nav>
                     <dl>
                         <dt className="blind">메뉴</dt>
                     {menu.map((val, index) => {
-                        let link = "./index.html?page=" + val[1];
+                        let link = "./?page=" + val[1];
                         let nowPage = "";
                         if(val[1] == this.page || (index == 0 && this.page == "edit")) nowPage = "on";
                         
@@ -90,7 +90,7 @@ class Page extends React.Component {
                         {this.samList.map((cont, index) => {
                             return (
                         <li key={index}>
-                            <a href="./index.html?page=edit" className="box" target="_blank">
+                            <a href="./?page=edit" className="box" target="_blank">
                                 <p className="img"><img src="./" alt="디자인 대표 화면 이미지" /></p>
                                 <div className="contBox">
                                     <h3 className="tit">{cont} {index+1}번</h3>

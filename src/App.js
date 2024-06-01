@@ -52,7 +52,7 @@ var Header = function (_React$Component) {
                     { className: "logo" },
                     React.createElement(
                         "a",
-                        { href: "./index.html" },
+                        { href: "./" },
                         "\uD3EC\uD2B8\uD3F4\uB9AC\uC624"
                     )
                 ),
@@ -68,7 +68,7 @@ var Header = function (_React$Component) {
                             "\uBA54\uB274"
                         ),
                         menu.map(function (val, index) {
-                            var link = "./index.html?page=" + val[1];
+                            var link = "./?page=" + val[1];
                             var nowPage = "";
                             if (val[1] == _this2.page || index == 0 && _this2.page == "edit") nowPage = "on";
 
@@ -191,7 +191,7 @@ var Page = function (_React$Component2) {
                                 { key: index },
                                 React.createElement(
                                     "a",
-                                    { href: "./index.html?page=edit", className: "box", target: "_blank" },
+                                    { href: "./?page=edit", className: "box", target: "_blank" },
                                     React.createElement(
                                         "p",
                                         { className: "img" },
